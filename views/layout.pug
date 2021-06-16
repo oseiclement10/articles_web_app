@@ -1,0 +1,42 @@
+doctype html
+html 
+ head 
+  title clemzy blog 
+  link(rel="stylesheet" href="/css/defined.css" type="text/css")
+ body
+  ul.navbar
+   li
+    a(href="#title") Knowledgebase 
+   li
+    a(href="/") Home
+   if user
+    li
+     a(href="/article/add") Add Article
+   li
+    a(href="/about" target="blank") About
+   .navbar-right
+    if user 
+     li 
+      a(href="/users/logout") Logout 
+    else 
+     li 
+      a(href="/users/register") Register 
+     li 
+      a(href="/users/login") Login
+  !=messages('message',locals)    
+  if errors 
+   each err , i in errors
+    div(class="alert alert-danger") #{err.msg}
+  .container
+   block content
+   br
+   br
+   br
+   hr
+   footer 
+    p
+     i copyright &copy;  2021 Clement Osei Asante
+  script(src='/bower_components/jquery/dist/jquery.js')  
+  script(src='/js/cmain.js')
+  
+  

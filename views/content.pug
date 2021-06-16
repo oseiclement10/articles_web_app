@@ -1,0 +1,17 @@
+extends layout 
+
+block content 
+ h1#header #{article.title}
+ .holder 
+  p #{article.body} 
+  p
+   .reference 
+    br
+    i by #{author}
+ br
+ hr
+ if user
+   if user.id == article.author
+    a.btn(href='/article/edit/'+ article.id) edit
+    a.btn-danger.delete-article(href='#',data-id=article.id) delete
+ 

@@ -1,0 +1,8 @@
+extends layout 
+
+block content 
+ h1 #{title}
+ ul.listmaker
+  each doc , i in articles  
+    li.listing
+     a(href="/article/"+doc.id)=doc.title

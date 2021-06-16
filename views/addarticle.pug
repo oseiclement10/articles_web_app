@@ -1,0 +1,14 @@
+extends layout 
+
+
+block content 
+ h1 #{title}
+
+ form.mainform(method='POST', action='/article/add')
+  #collection
+   label.description Title :
+   input.entry#title(name='title', type='text')  
+  #collection
+   label.description Body :
+   textarea.bdy#body(name="body")
+  input.btn(type='submit' value='submit')

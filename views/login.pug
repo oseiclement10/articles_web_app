@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+ h1 Login
+
+ form.mainform(method='POST', action='/users/login')
+  #collection
+   label.description Username:
+   input.entry#title(name='username', type='text')  
+  #collection
+   label.description Password:
+   input.entry#title(name='password', type='password')  
+  input.btn(type='submit' value='login')

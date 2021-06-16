@@ -1,0 +1,22 @@
+extends layout 
+
+block content 
+ h1 Register
+
+ form.mainform(method='POST', action='/users/register')
+  #collection
+   label.description Name:
+   input.entry#title(name='name', type='text')  
+  #collection
+   label.description Email:
+   input.entry#title(name='email', type='text')  
+  #collection
+   label.description User Name:
+   input.entry#title(name='username', type='text')  
+  #collection
+   label.description Password :
+   input.entry#author(name='password', type='password')
+  #collection
+   label.description Confirm Password:
+   input.entry#title(name='password2', type='password')    
+  input.btn(type='submit' value='submit')
